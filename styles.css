@@ -1,0 +1,30 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    width: 60%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1, h2 {
+    color: #333;
+}
+.contact-info, .skills, .experience, .education, .languages, .tools, .portfolio {
+    margin-bottom: 20px;
+}
+.contact-info p, .skills ul, .experience p, .education p, .languages p, .tools ul, .portfolio ul {
+    margin: 5px 0;
+}
+ul {
+    padding-left: 20px;
+}
