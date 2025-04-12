@@ -47,6 +47,22 @@
       font-size: 18px;
       color: #e5ddd5;
       text-decoration: none;
+      padding: 8px 15px;
+      transition: all 0.4s ease;
+      border: 1px solid transparent;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background:  
+        linear-gradient(90deg, rgba(3, 76, 74, 0.5), rgba(10, 42, 41, 0.6), rgba(10, 42, 41, 0.6), rgba(3, 76, 74, 0.5));
+      color: #ffffff;
+    }
+
+    nav ul li a.active {
+      background: linear-gradient(90deg, rgba(3, 76, 74, 0.5), rgba(10, 42, 41, 0.6), rgba(10, 42, 41, 0.6), rgba(3, 76, 74, 0.5));
+      color: #ffffff;
+      border: 1.5px solid #C9BDAE;
     }
 
     .contact-info-wrapper {
@@ -192,7 +208,7 @@
     <div class="nav-wrapper">
       <nav>
         <ul>
-          <li><a href="#">Головна сторінка</a></li>
+          <li><a href="#" class="active">Головна сторінка</a></li>
           <li><a href="#">Моя історія</a></li>
           <li><a href="#">Резюме</a></li>
         </ul>
