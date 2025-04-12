@@ -159,12 +159,43 @@
       opacity: 0.8;
     }
 
+      .my-rectangle-image {
+      width: 110px;
+      height: auto;
+      position: absolute;
+      top: 89px;
+      right: 640px;
+      z-index: 5;
+    }
+
     .group-image img {
       width: 85px;
       height: auto;
       position: absolute;
       bottom: 40px;
       left: 60px;
+    }
+
+      .social-vertical {
+      position: absolute;
+      bottom: 40px;
+      right: 710px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 20;
+    }
+
+    .social-vertical img {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .social-vertical img:hover {
+      transform: scale(1.15);
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -207,6 +238,21 @@
         <img src="My Photo.jpg" alt="Full screen image" class="full-screen-image">
       </div>
       <img src="Rectangle bottom.png" alt="Transparent Rectangle" class="rectangle-image">
+      <img src="Group Rectengles.png" alt="My Custom Rectangle" class="my-rectangle-image">
+      <div class="social-vertical">
+        <a href="https://www.behance.net/71c5e367" target="_blank">
+          <img src="Bechance.png" alt="Behance">
+        </a>
+        <a href="https://www.instagram.com/viki_ui.ux/" target="_blank">
+          <img src="Instagram.png" alt="Instagram">
+        </a>
+        <a href="https://t.me/Viki_RO25" target="_blank">
+          <img src="Telegram.png" alt="Telegram">
+        </a>
+        <a href="https://www.linkedin.com/in/viktoriia-rachynska-b2b102342/" target="_blank">
+          <img src="Linkedin.png" alt="LinkedIn">
+        </a>
+      </div>      
     </section>
     <section></section>
     <div class="group-image">
