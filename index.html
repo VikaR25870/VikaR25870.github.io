@@ -1,94 +1,217 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Viktoriia Rachynska</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Ellipse 3.png">
+  <title>Portfolio | Viktoriia Rachynska</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: url("Picture Background.jpg") no-repeat center center/cover;
+      color: #EDF0F7;
+      height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      position: relative;
+      height: 80px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-wrapper {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      font-family: 'EB Garamond', medium;
+      font-size: 18px;
+      color: #e5ddd5;
+      text-decoration: none;
+    }
+
+    .contact-info-wrapper {
+      position: absolute;
+      top: 30px;
+      right: 80px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: 'Forum', regular;
+      font-size: 18px;
+      color: #E7E5D9;
+    }
+
+    .contact-info-wrapper img {
+      margin-right: -10px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: -80px;
+    }
+
+    .info {
+      max-width: 50%;
+    }
+    
+    .position-title {
+      font-family: 'Forum', regular;
+      font-size: 30px;
+      letter-spacing: 5px;
+      line-height: 1.2;
+      color: #D2CBC3;
+      position: absolute;
+      top: 200px;
+      left: 185px;
+    }
+
+    .name-block h1 {
+      font-family: 'Forum', regular;
+      font-weight: 400;
+      font-size: 60px;
+      color: #EDF0F7;
+      position: absolute;
+    }
+
+    .name-block h1 .first-name {
+      font-family: 'Forum', regular;
+      font-weight: 400;
+      font-size: 60px;
+      color: #EDF0F7;
+      position: absolute;
+      top: -125px;
+      left: 25px;
+    }
+
+    .name-block h1 .last-name {
+      font-family: 'Forum', regular;
+      font-weight: 400;
+      font-size: 50px;
+      color: #D2C2B5;
+      position: absolute;
+      top: -55px;
+      left: 250px;
+    }
+
+    .quote {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 20px 0;
+      position: absolute;
+      top: 370px;
+      left: 185px;
+    }
+
+    .contact-button {
+      background-color: #E7E5D9;
+      color: #0A1F20;
+      padding: 10px 49.5px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: 'EB Garamond', medium;
+      position: absolute;
+      top: 500px;
+      left: 185px;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100vh;
+      max-width: 600px;
+      object-fit: cover;
+      box-shadow: 0px 0px 23.9px rgb(6, 27, 25);
+    }
+
+    .rectangle-image {
+      width: 289px;
+      height: 80px;
+      position: absolute;
+      bottom: 40px;
+      right: 0px;
+      opacity: 0.8;
+    }
+
+    .group-image img {
+      width: 85px;
+      height: auto;
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Вікторія Рачинська</h1>
-        <h2>UX/UI Designer</h2>
-        
-        <div class="contact-info">
-            <h3>Контакти</h3>
-            <p><strong>Місто:</strong> Первомайськ, Миколаївська обл.</p>
-            <p><strong>Телефон:</strong> +380(50)747-44-54</p>
-            <p><strong>Email:</strong> rachinska332@gmail.com</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/viktoriia-rachynska-b2b102342/">Профіль</a></p>
-        </div>
-        
-        <div class="education">
-            <h3>Освіта</h3>
-            <p><strong>Національний Фармацевтичний Університет</strong> (2018 - 2023) - Фармація</p>
-            <p><strong>Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП</strong> (2024, 4 місяці)</p>
-            <p><strong>Курс: GAME DESIGN. BASIS</strong> (2023 - 2024, 6 місяців)</p>
-        </div>
-        
-        <div class="skills">
-            <h3>Навички</h3>
-            <ul>
-                <li>Командна робота</li>
-                <li>Здатність до навчання</li>
-                <li>Адаптивність</li>
-                <li>Комунікація</li>
-                <li>Стресостійкість</li>
-                <li>Емпатія</li>
-            </ul>
-        </div>
-        
-        <div class="experience">
-            <h3>Досвід роботи</h3>
-            <p><strong>Фриланс, UX/UI Designer</strong> (Лютий 2024 - по теперішній час)</p>
-            <ul>
-                <li>Створення графічних матеріалів (візитки, буклети)</li>
-                <li>Розробка прототипів</li>
-                <li>Корпоративний сайт</li>
-                <li>Створення Landing Page</li>
-                <li>Дизайн мобільних додатків</li>
-                <li>Ескіз вакансій для Instagram</li>
-                <li>Розробка логотипів</li>
-                <li>Аналіз потреб користувачів</li>
-                <li>Дослідження та аналіз даних</li>
-                <li>Створення навчальних матеріалів</li>
-            </ul>
-            <p><strong>Лаборант, Національний Фармацевтичний Університет</strong> (2018 - 2022)</p>
-            <ul>
-                <li>Координація лабораторних робіт</li>
-                <li>Аналіз даних</li>
-                <li>Оформлення документів у приймальній комісії</li>
-            </ul>
-        </div>
-        
-        <div class="languages">
-            <h3>Мови</h3>
-            <p>Українська: рідна</p>
-            <p>Англійська: A2-B1</p>
-            <p>Російська: вільно</p>
-            <p>Польська: A2-B1</p>
-        </div>
-        
-        <div class="tools">
-            <h3>Інструменти</h3>
-            <ul>
-                <li>Figma</li>
-                <li>Photoshop</li>
-                <li>Adobe XD</li>
-                <li>Illustrator</li>
-            </ul>
-        </div>
-        
-        <div class="portfolio">
-            <h3>Портфоліо</h3>
-            <ul>
-                <li><a href="https://www.behance.net/71c5e367">Behance</a></li>
-                <li><a href="https://www.instagram.com/viki2.1/">Instagram</a></li>
-                <li><a href="https://t.me/Viki_RO25">Telegram</a></li>
-                <li><a href="https://www.linkedin.com/in/viktoriia-rachynska-b2b102342/">LinkedIn</a></li>
-            </ul>
-        </div>
+  <header>
+    <div class="nav-wrapper">
+      <nav>
+        <ul>
+          <li><a href="#">Головна сторінка</a></li>
+          <li><a href="#">Моя історія</a></li>
+          <li><a href="#">Резюме</a></li>
+        </ul>
+      </nav>
     </div>
+    <div class="contact-info-wrapper">
+      <img src="Property 1=Phone.svg" alt="Phone Icon" width="20" height="20">
+      <span><small>+380(50)747-44-54</small></span>
+      <span><small>UA ▾</small></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="info">
+        <div class="position-title">
+          <p>UX/UI DESIGNER</p>
+        </div>
+        <div class="name-block">
+          <h1>
+            <span class="first-name">Рачинська</span> 
+            <span class="last-name">Вікторія</span>
+          </h1>
+        </div>
+        <p class="quote">
+          Я не просто створюю дизайн – я проєктую досвід, де кожен клік має сенс, а кожен елемент працює на користь користувача.
+        </p>
+        <button class="contact-button">Написати мені</button>
+      </div>
+      <div class="image">
+        <img src="My Photo.jpg" alt="Full screen image" class="full-screen-image">
+      </div>
+      <img src="Rectangle bottom.png" alt="Transparent Rectangle" class="rectangle-image">
+    </section>
+    <section></section>
+    <div class="group-image">
+      <img src="Group 23.png" alt="Grouped Rectangles">
+    </div>
+  </main>
 </body>
 </html>
