@@ -122,7 +122,7 @@
       max-width: 630px;
       margin: 20px 0;
       position: absolute;
-      top: 280px;
+      top: 270px;
       left: 120px;
     }
 
@@ -135,11 +135,66 @@
       max-width: 600px;
       margin: 20px 0;
       position: absolute;
-      top: 415px;
+      top: 400px;
       left: 210px;
     }
 
-</style>
+    .custom-rectangle {
+      width: 250px;
+      height: 50px;
+      border: 1px solid #e7d7cd;
+      border-radius: 3px;
+      position: absolute;
+      bottom: 30px;
+      left: 750px;
+    }
+
+    .group-image img {
+      width: 185px;
+      height: auto;
+      position: absolute;
+      top: 440px;
+      left: 0px;
+    }
+
+    .decor-grid {
+      position: absolute;
+      top: 80px;
+      right: 105px;
+      width: 126px;
+      height: auto;
+      z-index: 1;
+    }
+
+    .location-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      line-height: 1.4;
+      position: absolute;
+      bottom: 30px;
+      left: 300px;
+    }
+
+    .location-text::before, .location-text::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    .location-text::before {
+      background: linear-gradient(to right, #0A2A29, #EDF0F7);
+      left: -70px;
+    }
+    .location-text::after {
+      background: linear-gradient(to left, #0A2A29, #EDF0F7);
+      right: -70px;
+    }
+  </style>
 
 </head>
 <body>
@@ -171,12 +226,15 @@
           Моя мета — поєднувати функціональність та візуальну привабливість, щоб кожен користувач отримував приємний досвід взаємодії з продуктом.
         </p>
        <p class="about-paragraph-2">
-          Маючи невеликий практичний досвід в дизайні, я готова створювати ефективні цифрові рішення, орієнтовані на потреби користувачів. 
-          Мій аналітичний підхід дозволяє мені досліджувати та впроваджувати UX-інсайти, що покращують кінцевий продукт. 
-          Вмію працювати у команді, швидко адаптуюся до нових викликів та завжди прагну професійного розвитку.
+        Моя мета: випробувати себе в новому середовищі, щоб навчатися, розвиватися, вдосконалювати свої навички за допомогою різних проектів і робити більший внесок у компанію своїми здібностями.
         </p>
     </div>
-    </section>       
+    <div class="custom-rectangle"></div>
+    <div class="group-image">
+      <img src="Small Rectangles 2.png" alt="Grouped Rectangles">
+    </div>
+    <img src="Triangles and rectangles.png" alt="Декоративні елементи" class="decor-grid">
+    <p class="location-text">Первомайськ, Миколаївська обл.,<br>Україна</p>    
     </main>
 </body>
 </html>
