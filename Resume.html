@@ -133,9 +133,12 @@
     object-fit: contain;
     }
 
-    .soft-skills-section {
+    .soft-skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-left: 75px;
-    margin-top: 30px;
+    margin-top: 40px;
     }
 
     .soft-skills-title {
@@ -147,17 +150,25 @@
     margin-bottom: 20px;
     }
 
-    .soft-skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 12px 40px;
+    .soft-skills-wrapper {
+    display: flex;
+    gap: 30px;
+    }
+
+    .skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #ffffff;
-    line-height: 1.6;
-    max-width: 630px;
-    margin: 20px 0;
+    }
+
+    .vertical-line {
+    width: 1px;
+    background: linear-gradient(to bottom, #193F3E, #E7E5D9, #193F3E);
+    min-height: 100px;
     }
 </style>
 
@@ -196,17 +207,22 @@
       </div>
     </div>
     
-    <div class="soft-skills-section">
-        <h2 class="soft-skills-title">Навики</h2>
-        <div class="soft-skills-grid">
+    <div class="soft-skills-container">
+      <h2 class="soft-skills-title">Навики</h2>
+      <div class="soft-skills-wrapper">
+        <div class="skills-column">
           <div>Командна робота</div>
           <div>Стресостійкість</div>
+          <div>Здатність до швидкого <p>навчання</p></div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="skills-column">
           <div>Адаптивність</div>
           <div>Комунікація</div>
-          <div>Здатність до швидкого <p>навчання</p></div>
           <div>Емпатія</div>
         </div>
       </div>
-  </main>  
+    </div> 
+   </main>    
 </body>
 </html>
