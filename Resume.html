@@ -71,8 +71,7 @@
     }
 
     nav ul li a:hover {
-      background:  
-        linear-gradient(90deg, rgba(3, 76, 74, 0.5), rgba(10, 42, 41, 0.6), rgba(10, 42, 41, 0.6), rgba(3, 76, 74, 0.5));
+      background:  linear-gradient(90deg, rgba(3, 76, 74, 0.5), rgba(10, 42, 41, 0.6), rgba(10, 42, 41, 0.6), rgba(3, 76, 74, 0.5));
       color: #ffffff;
     }
 
@@ -98,77 +97,261 @@
     }
 
     .skills-section {
-    margin-left: 75px;
-    margin-top: 20px;
-    position: relative;
-    }
+      margin-left: 75px;
+      margin-top: 20px;
+      position: relative;
+      }
 
     .skills-title {
-    font-family: 'Forum', serif;
-    font-size: 24px;
-    color: #D2C2B5;
-    font-weight: 100;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    position: relative;
-    left: 0;
-    top: 0;
-    }
+      font-family: 'Forum', serif;
+      font-size: 24px;
+      color: #D2C2B5;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      position: relative;
+      left: 0;
+      top: 0;
+      }
 
     .skills-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    }
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      }
 
     .icon-row {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    }
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      }
 
     .icon-row img {
-    width: 45px;
-    height: auto;
-    object-fit: contain;
-    }
+      width: 45px;
+      height: auto;
+      object-fit: contain;
+      }
 
     .soft-skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 75px;
-    margin-top: 40px;
-    }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 75px;
+      margin-top: 65px;
+      }
 
     .soft-skills-title {
-    font-family: 'Forum', serif;
-    font-size: 24px;
-    color: #D2C2B5;
-    font-weight: 100;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    }
+      font-family: 'Forum', serif;
+      font-size: 24px;
+      color: #D2C2B5;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      }
 
     .soft-skills-wrapper {
-    display: flex;
-    gap: 30px;
-    }
+      display: flex;
+      gap: 20px;
+      }
 
     .skills-column {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      font-family: 'EB Garamond', medium;
+      letter-spacing: 0.5px;
+      font-size: 18px;
+      font-weight: 300;
+      color: #EDF0F7
+      }
+
+    .vertical-line {
+      width: 1px;
+      background: linear-gradient(to bottom, #193F3E, #E7E5D9, #193F3E);
+      min-height: 100px;
+      }
+
+    .education-section {
+      left: 520px;
+      top: 100px;
+      position: absolute;
+      max-width: 400px;
+    }
+
+    .education-title {
+      font-family: 'Forum', serif;
+      font-size: 24px;
+      color: #D2C2B5;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .education-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .education-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .education-year {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #21B8B4;
+      min-width: 110px;
+    }
+
+    .education-year small {
+      font-size: 12px;
+      font-weight: 200;
+    }
+
+    .education-detail {
+      font-family: 'EB Garamond', medium;
+      font-size: 16px;
+      color: #EDF0F7;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .education-detail::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0.5px;
+      height: 100%;
+      background: linear-gradient(to bottom, #193F3E, #E7E5D9, #193F3E);
+    }
+
+    .language-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .language-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .language-title {
+      font-family: 'Forum', serif;
+      font-size: 24px;
+      color: #D2C2B5;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .language-section {
+      position: absolute;
+      top: 320px;
+      left: 520px;
+      max-width: 400px;
+    }
+
+    .language-row {
+      display: flex;
+      gap: 0px;
+      font-family: 'EB Garamond', medium;
+      font-size: 18px;
+      color: #EDF0F7;
+    }
+
+    .lang-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #21B8B4;
+      min-width: 110px;
     }
 
     .vertical-line {
-    width: 1px;
-    background: linear-gradient(to bottom, #193F3E, #E7E5D9, #193F3E);
-    min-height: 100px;
+      width: 1px;
+      background: linear-gradient(to bottom, #193F3E, #E7E5D9, #193F3E);
+      min-height: 50px;
+      align-self: stretch;
+    }
+
+    .what-i-can-do-section {
+      position: absolute;
+      top: 480px;
+      left: 500px;
+      max-width: 420px;
+    }
+
+    .what-i-can-do-content {
+      position: relative;
+      padding-left: 20px;
+      font-family: 'EB Garamond', serif;
+      color: #EDF0F7;
+    }
+
+    .what-i-can-do-content h2 {
+      font-family: 'Forum', serif;
+      font-size: 24px;
+      font-weight: 100;
+      color: #D2C2B5;
+      margin-bottom: 15px;
+    }
+
+    .what-i-can-do-content li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+
+    .experience-column {
+      max-width: 420px;
+      font-family: 'Georgia', serif;
+      color: #D2C2B5;
+      padding: 20px;
+      position: absolute;
+      top: 80px;
+      right: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .experience-column h2 {
+      font-size: 24px;
+      margin-bottom: 24px;
+      font-weight: normal;
+    }
+
+    .job-block {
+      margin-bottom: 20px;
+    }
+
+    .job-date {
+      font-family: 'Montserrat', sans-serif;
+      display: block;
+      color: #21B8B4;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .job-block h3 {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .job-block ul {
+      padding-left: 20px;
+      margin: 0;
+      list-style: disc;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #EDF0F7;
     }
 </style>
 
@@ -223,6 +406,93 @@
         </div>
       </div>
     </div> 
+
+    <div class="education-section">
+      <h2 class="education-title">Освіта</h2>
+      <div class="education-wrapper">
+        <div class="education-entry">
+          <span class="education-year">2024р.<br>(4 місяці)</br></span>
+          <span class="education-detail">Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП</span>
+        </div>
+        <div class="education-entry">
+          <span class="education-year">2023 – 2024р.<br>(6 місяців)</br></span>
+          <span class="education-detail">Курс: GAME DESIGN. BASIS</span>
+        </div>
+        <div class="education-entry">
+          <span class="education-year">2018 – 2023р.</span>
+          <span class="education-detail">Національний Фармацевтичний Університет</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="language-section">
+      <h2 class="language-title">Знання мов</h2>
+      <div class="language-wrapper">
+        <div class="language-column">
+          <div class="language-row">
+            <span class="lang-name">Українська:</span> 
+            <span class="lang-level">Рідна</span>
+          </div>
+          <div class="language-row">
+            <span class="lang-name">Англійська:</span> 
+            <span class="lang-level">A2-B1</span>
+          </div>
+        </div>
+    
+        <div class="vertical-line"></div>
+    
+        <div class="language-column">
+          <div class="language-row">
+            <span class="lang-name">Російська:</span> 
+            <span class="lang-level">Вільно</span>
+          </div>
+          <div class="language-row">
+            <span class="lang-name">Польська:</span> 
+            <span class="lang-level">A2-B1</span>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+    <div class="what-i-can-do-section">
+      <div class="what-i-can-do-content">
+        <h2>Що я вмію?</h2>
+        <ul>
+          <li>Дизайн вебсайтів та мобільних додатків у Figma:</li>
+          <li>Прототипування, UX-дослідження, аналіз користувачів;</li>
+          <li>Робота з типографікою, композицією та графічними елементами.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="experience-column">
+      <h2>Досвід роботи</h2>
+    
+      <div class="job-block">
+        <span class="job-date">Лютий 2024 – по сьогодні</span>
+        <h3>Фриланс, UX/UI Designer</h3>
+        <ul>
+          <li>Створення графічних матеріалів, таких як візитки та буклети;</li>
+          <li>Розробка прототипів;</li>
+          <li>Корпоративний сайт;</li>
+          <li>Створення Landing page;</li>
+          <li>Дизайн мобільних додатків;</li>
+          <li>Ескіз вакансій для інстаграму;</li>
+          <li>Розробка логотипів;</li>
+          <li>Аналіз даних для покращення дизайну.</li>
+        </ul>
+      </div>
+      <div class="job-block">
+        <span class="job-date">2018 – 2022</span>
+        <h3>Лаборант / Національний Фармацевтичний Університет</h3>
+        <ul>
+          <li>Проведення досліджень, обробка та аналіз даних;</li>
+          <li>Створення навчальних матеріалів з графікою;</li>
+          <li>Планування та координація лабораторної роботи;</li>
+          <li>Участь у приймальній комісії, оформлення документівю</li>
+        </ul>
+      </div>
+    </div>    
    </main>    
 </body>
 </html>
