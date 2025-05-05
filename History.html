@@ -10,12 +10,26 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      cursor: none !important;
     }
+
     body {
       background: url("Background 2.jpg") no-repeat center center/cover;
       color: #0A2A29;
       height: 100vh;
       overflow: hidden;
+      cursor: none;
+    }
+
+    .custom-cursor-shadow {
+      pointer-events: none;
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      background: url("Cursor.png") no-repeat center center;
+      background-size: contain;
+      z-index: 9999;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
     }
 
     header {
@@ -71,13 +85,38 @@
     .contact-info-wrapper {
       position: absolute;
       top: 40px;
-      right: 80px;
+      right: 160px;
       display: flex;
       align-items: center;
       gap: 20px;
       font-family: 'Forum', regular;
       font-size: 18px;
       color: #E7E5D9;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 42px;
+      right: 70px;
+      font-family: 'EB Garamond', medium;
+      font-size: 14px;
+      color: #e5ddd5;
+      z-index: 100;
+    }
+
+    .language-switcher button {
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 0 5px;
+      transition: opacity 0.3s ease;
+    }
+
+    .language-switcher button:hover {
+      opacity: 0.7;
+      color: #21B8B4;
     }
 
     .photo-container {
@@ -201,16 +240,19 @@
     <div class="nav-wrapper">
       <nav>
         <ul>
-          <li><a href="index.html">Головна сторінка</a></li>
-          <li><a href="History.html"class="active">Моя історія</a></li>
-          <li><a href="Resume.html">Резюме</a></li>
+          <li><a href="index.html"id="nav-home">Головна сторінка</a></li>
+          <li><a href="History.html"class="active"id="nav-history">Моя історія</a></li>
+          <li><a href="Resume.html"id="nav-resume">Резюме</a></li>
         </ul>
       </nav>
     </div>
     <div class="contact-info-wrapper">
       <img src="Property 1=Phone.svg" alt="Phone Icon" width="20" height="20">
       <span><small>+380(50)747-44-54</small></span>
-      <span><small>UA ▾</small></span>
+    </div>
+    <div class="language-switcher">
+      <button onclick="setLanguage('uk')">UA</button> |
+      <button onclick="setLanguage('en')">EN</button>
     </div>
   </header>
 
@@ -235,5 +277,58 @@
     <img src="Triangles and rectangles.png" alt="Декоративні елементи" class="decor-grid">
     <p class="location-text">Первомайськ, Миколаївська обл.,<br>Україна</p>    
     </main>
+    <script>
+      const cursor = document.createElement('div');
+      cursor.classList.add('custom-cursor-shadow');
+      document.body.appendChild(cursor);
+    
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+    </script>
+
+<script>
+  const translations = {
+    uk: {
+      title: "Трохи про мене",
+      paragraph1: `Я UX/UI дизайнер, який захоплений створенням зручних та естетично привабливих цифрових продуктів. 
+      Моя мета — поєднувати функціональність та візуальну привабливість, щоб кожен користувач отримував приємний досвід взаємодії з продуктом.`,
+      paragraph2: `Моя мета: випробувати себе в новому середовищі, щоб навчатися, розвиватися, вдосконалювати свої навички за допомогою різних проектів і робити більший внесок у компанію своїми здібностями.`,
+      location: `Первомайськ, Миколаївська обл.,<br>Україна`,
+      nav1: "Головна сторінка",
+      nav2: "Моя історія",
+      nav3: "Резюме"
+    },
+    en: {
+      title: "A Bit About Me",
+      paragraph1: `I am a UX/UI designer passionate about creating user-friendly and aesthetically pleasing digital products.
+      My goal is to combine functionality and visual appeal so that every user enjoys interacting with the product.`,
+      paragraph2: `My goal is to challenge myself in a new environment, to learn, grow, improve my skills through various projects, and contribute more to the company with my abilities.`,
+      location: `Pervomaisk, Mykolaiv region,<br>Ukraine`,
+      nav1: "Main page",
+      nav2: "My Story",
+      nav3: "Resume"
+    }
+  };
+
+  function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    document.querySelector('.about-title').innerHTML = translations[lang].title;
+    document.querySelector('.about-paragraph-1').innerHTML = translations[lang].paragraph1;
+    document.querySelector('.about-paragraph-2').innerHTML = translations[lang].paragraph2;
+    document.querySelector('.location-text').innerHTML = translations[lang].location;
+
+    const navItems = document.querySelectorAll("nav ul li a");
+    navItems[0].innerHTML = translations[lang].nav1;
+    navItems[1].innerHTML = translations[lang].nav2;
+    navItems[2].innerHTML = translations[lang].nav3;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('lang') || 'uk';
+    setLanguage(savedLang);
+  });
+</script>
 </body>
 </html>

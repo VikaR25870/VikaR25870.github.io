@@ -10,13 +10,27 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      cursor: none !important;
     }
+
     body {
       background: url("Picture Background.jpg") no-repeat center center/cover;
       color: #0A2A29;
       height: 100vh;
       overflow: hidden;
-      }
+      cursor: none;
+    }
+
+    .custom-cursor-shadow {
+      pointer-events: none;
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      background: url("Cursor.png") no-repeat center center;
+      background-size: contain;
+      z-index: 9999;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+    }
 
     header {
       width: 100%;
@@ -70,17 +84,42 @@
     .contact-info-wrapper {
       position: absolute;
       top: 40px;
-      right: 80px;
+      right: 160px;
       display: flex;
       align-items: center;
       gap: 20px;
-      font-family: 'Forum', regular;
+      font-family: 'EB Garamond', medium;
       font-size: 18px;
       color: #E7E5D9;
     }
 
     .contact-info-wrapper img {
       margin-right: -10px;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 42px;
+      right: 70px;
+      font-family: 'EB Garamond', medium;
+      font-size: 14px;
+      color: #e5ddd5;
+      z-index: 100;
+    }
+
+    .language-switcher button {
+      background: none;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 0 5px;
+      transition: opacity 0.3s ease;
+    }
+
+    .language-switcher button:hover {
+      opacity: 0.7;
+      color: #21B8B4;
     }
 
     .hero {
@@ -165,7 +204,7 @@
       opacity: 0.8;
     }
 
-      .my-rectangle-image {
+    .my-rectangle-image {
       width: 110px;
       height: auto;
       position: absolute;
@@ -239,32 +278,33 @@
     <div class="nav-wrapper">
       <nav>
         <ul>
-          <li><a href="index.html" class="active">Головна сторінка</a></li>
-          <li><a href="History.html">Моя історія</a></li>
-          <li><a href="Resume.html">Резюме</a></li>
+          <li><a href="index.html" class="active" id="nav-home">Головна сторінка</a></li>
+          <li><a href="History.html" id="nav-history">Моя історія</a></li>
+          <li><a href="Resume.html" id="nav-resume">Резюме</a></li>
         </ul>
       </nav>
     </div>
     <div class="contact-info-wrapper">
       <img src="Property 1=Phone.svg" alt="Phone Icon" width="20" height="20">
       <span><small>+380(50)747-44-54</small></span>
-      <span><small>UA ▾</small></span>
+    </div>
+    <div class="language-switcher">
+      <button onclick="setLanguage('uk')">UA</button> |
+      <button onclick="setLanguage('en')">EN</button>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="info">
-        <div class="position-title">
-          <p>UX/UI DESIGNER</p>
-        </div>
+        <p class="position-title" id="position-title">UX/UI DESIGNER</p>
         <div class="name-block">
           <h1>
-            <span class="first-name">Рачинська</span> 
-            <span class="last-name">Вікторія</span>
+            <span class="first-name" id="first-name">Рачинська</span> 
+            <span class="last-name" id="last-name">Вікторія</span>
           </h1>
         </div>
-        <p class="quote">
+        <p class="quote" id="quote">
           Я не просто створюю дизайн – я проєктую досвід, де кожен клік має сенс, а кожен елемент працює на користь користувача.
         </p>
       </div>
@@ -274,6 +314,9 @@
       <img src="Rectangle bottom.png" alt="Transparent Rectangle" class="rectangle-image">
       <img src="Big Rectangles.png" alt="My Custom Rectangle" class="my-rectangle-image">
       <div class="social-vertical">
+        <a href="https://github.com/VikaR25870" target="_blank">
+          <img src="Github.png" alt="Github">
+        </a>
         <a href="https://www.behance.net/71c5e367" target="_blank">
           <img src="Bechance.png" alt="Behance">
         </a>
@@ -294,5 +337,48 @@
     </div>
     <p class="location-text">rachinska332@gmail.com</p> 
   </main>
+  <script>
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor-shadow');
+    document.body.appendChild(cursor);
+  
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    const translations = {
+      uk: {
+        'position-title': 'UX/UI ДИЗАЙНЕР',
+        'first-name': 'Рачинська',
+        'last-name': 'Вікторія',
+        'quote': 'Я не просто створюю дизайн – я проєктую досвід, де кожен клік має сенс, а кожен елемент працює на користь користувача.',
+        'nav-home': 'Головна сторінка',
+        'nav-history': 'Моя історія',
+        'nav-resume': 'Резюме'
+      },
+      en: {
+        'position-title': 'UX/UI DESIGNER',
+        'first-name': 'Rachynska',
+        'last-name': 'Viktoriia',
+        'quote': 'I don’t just create design – I design experiences where every click matters, and every element serves the user.',
+        'nav-home': 'Main page',
+        'nav-history': 'My Story',
+        'nav-resume': 'Resume'
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      const t = translations[lang];
+
+      for (const id in t) {
+        const el = document.getElementById(id);
+        if (el) el.innerText = t[id];
+      }
+    }
+    const savedLang = localStorage.getItem('lang') || 'uk';
+    setLanguage(savedLang);
+  </script>
 </body>
 </html>
