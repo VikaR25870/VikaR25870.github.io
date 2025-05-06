@@ -201,7 +201,7 @@
       letter-spacing: 0.5px;
       font-size: 18px;
       font-weight: 300;
-      color: #EDF0F7
+      color: #EDF0F7;
       }
 
     .vertical-line {
@@ -393,16 +393,16 @@
       color: #EDF0F7;
     }
 </style>
-
 </head>
+
 <body>
   <header>
     <div class="nav-wrapper">
       <nav>
         <ul>
-          <li><a href="index.html">Головна сторінка</a></li>
-          <li><a href="History.html">Моя історія</a></li>
-          <li><a href="Resume.html"class="active">Резюме</a></li>
+          <li><a href="index.html"id="nav-home">Головна сторінка</a></li>
+          <li><a href="History.html"id="nav-history">Моя історія</a></li>
+          <li><a href="Resume.html"class="active"id="nav-resume">Резюме</a></li>
         </ul>
       </nav>
     </div>
@@ -415,11 +415,10 @@
       <button onclick="setLanguage('en')">EN</button>
     </div>
   </header>
-  </header>
 
   <main> 
     <div class="skills-section">
-      <h1 class="skills-title">Технічні навички</h1>
+      <h1 class="skills-title" id="skills-title">Технічні навички</h1>
       <div class="skills-icons">
         <div class="icon-row">
           <img src="GPT.png" alt="ChatGPT">
@@ -434,51 +433,51 @@
     </div>
     
     <div class="soft-skills-container">
-      <h2 class="soft-skills-title">Навики</h2>
+      <h2 class="soft-skills-title" id="soft-skills-title">Навики</h2>
       <div class="soft-skills-wrapper">
         <div class="skills-column">
-          <div>Командна робота</div>
-          <div>Стресостійкість</div>
-          <div>Здатність до швидкого <br>навчання</br></div>
+          <div id="skill-1">Командна робота</div>
+          <div id="skill-2">Стресостійкість</div>
+          <div id="skill-3">Швидке навчання</div>
         </div>
         <div class="vertical-line"></div>
         <div class="skills-column">
-          <div>Адаптивність</div>
-          <div>Комунікація</div>
-          <div>Емпатія</div>
+          <div id="skill-4">Адаптивність</div>
+          <div id="skill-5">Комунікація</div>
+          <div id="skill-6">Емпатія</div>
         </div>
       </div>
     </div> 
 
     <div class="education-section">
-      <h2 class="education-title">Освіта</h2>
+      <h2 class="education-title" id="education-title">Освіта</h2>
       <div class="education-wrapper">
         <div class="education-entry">
-          <span class="education-year">2024р.<br>(4 місяці)</br></span>
-          <span class="education-detail">Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП</span>
+          <span class="education-year" id="education-year-1">2024р.<br>(4 місяці)</br></span>
+          <span class="education-detail" id="edu-1">Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП</span>
         </div>
         <div class="education-entry">
-          <span class="education-year">2023 – 2024р.<br>(6 місяців)</br></span>
-          <span class="education-detail">Курс: GAME DESIGN. BASIS</span>
+          <span class="education-year" id="education-year-2">2023 / 2024р.<br>(6 місяців)</br></span>
+          <span class="education-detail" id="edu-2">Курс: GAME DESIGN. BASIS</span>
         </div>
         <div class="education-entry">
-          <span class="education-year">2018 – 2023р.</span>
-          <span class="education-detail">Національний Фармацевтичний Університет</span>
+          <span class="education-year" id="education-year-3",>2018 / 2023р.</span>
+          <span class="education-detail" id="edu-3">Національний Фармацевтичний Університет</span>
         </div>
       </div>
     </div>
     
     <div class="language-section">
-      <h2 class="language-title">Знання мов</h2>
+      <h2 class="language-title" id="language-title">Знання мов</h2>
       <div class="language-wrapper">
         <div class="language-column">
           <div class="language-row">
-            <span class="lang-name">Українська:</span> 
-            <span class="lang-level">Рідна</span>
+            <span class="lang-name" id="ukr">Українська:</span> 
+            <span class="lang-level" id="ukr-lvl">Рідна</span>
           </div>
           <div class="language-row">
-            <span class="lang-name">Англійська:</span> 
-            <span class="lang-level">A2-B1</span>
+            <span class="lang-name" id="eng">Англійська:</span> 
+            <span class="lang-level" id="eng-lvl">A2-B1</span>
           </div>
         </div>
     
@@ -486,12 +485,12 @@
     
         <div class="language-column">
           <div class="language-row">
-            <span class="lang-name">Російська:</span> 
-            <span class="lang-level">Вільно</span>
+            <span class="lang-name" id="rus">Російська:</span> 
+            <span class="lang-level" id="rus-lvl">Вільно</span>
           </div>
           <div class="language-row">
-            <span class="lang-name">Польська:</span> 
-            <span class="lang-level">A2-B1</span>
+            <span class="lang-name" id="pl">Польська:</span> 
+            <span class="lang-level" id="pl-lvl">A2-B1</span>
           </div>
         </div>
       </div>
@@ -499,40 +498,40 @@
     
     <div class="what-i-can-do-section">
       <div class="what-i-can-do-content">
-        <h2>Що я вмію?</h2>
+        <h2 id= "can-do-title">Що я вмію?</h2>
         <ul>
-          <li>Дизайн вебсайтів та мобільних додатків у Figma:</li>
-          <li>Прототипування, UX-дослідження, аналіз користувачів;</li>
-          <li>Робота з типографікою, композицією та графічними елементами.</li>
+          <li id= "can-do-1">Дизайн вебсайтів та мобільних додатків у Figma;</li>
+          <li id= "can-do-2">Прототипування, UX-дослідження, аналіз користувачів;</li>
+          <li id= "can-do-3">Робота з типографікою, композицією та графічними елементами.</li>
         </ul>
       </div>
     </div>
     
     <div class="experience-column">
-      <h2>Досвід роботи</h2>
+      <h2 id= "experience-title">Досвід роботи</h2>
     
       <div class="job-block">
-        <span class="job-date">Лютий 2024 – по сьогодні</span>
-        <h3>Фриланс, UX/UI Designer</h3>
+        <span class="job-date" id= "exp-date-1">Лютий 2024 / по сьогодні</span>
+        <h3 id= "exp-title-1">Фриланс, UX/UI Designer</h3>
         <ul>
-          <li>Створення графічних матеріалів, таких як візитки та буклети;</li>
-          <li>Розробка прототипів;</li>
-          <li>Корпоративний сайт;</li>
-          <li>Створення Landing page;</li>
-          <li>Дизайн мобільних додатків;</li>
-          <li>Ескіз вакансій для інстаграму;</li>
-          <li>Розробка логотипів;</li>
-          <li>Аналіз даних для покращення дизайну.</li>
+          <li id= "exp-1-1">Створення графічних матеріалів, таких як візитки та буклети;</li>
+          <li id= "exp-1-2">Розробка прототипів;</li>
+          <li id= "exp-1-3">Корпоративний сайт;</li>
+          <li id= "exp-1-4">Створення Landing page;</li>
+          <li id= "exp-1-5">Дизайн мобільних додатків;</li>
+          <li id= "exp-1-6">Ескіз вакансій для інстаграму;</li>
+          <li id= "exp-1-7">Розробка логотипів;</li>
+          <li id= "exp-1-8">Аналіз даних для покращення дизайну.</li>
         </ul>
       </div>
       <div class="job-block">
-        <span class="job-date">2018 – 2022</span>
-        <h3>Лаборант / Національний Фармацевтичний Університет</h3>
+        <span class="job-date">2018 / 2022</span>
+        <h3 id= "exp-title-2">Лаборант / Національний Фармацевтичний Університет</h3>
         <ul>
-          <li>Проведення досліджень, обробка та аналіз даних;</li>
-          <li>Створення навчальних матеріалів з графікою;</li>
-          <li>Планування та координація лабораторної роботи;</li>
-          <li>Участь у приймальній комісії, оформлення документівю</li>
+          <li id= "exp-1-9">Проведення досліджень, обробка та аналіз даних;</li>
+          <li id= "exp-1-10">Створення навчальних матеріалів з графікою;</li>
+          <li id= "exp-1-11">Планування та координація лабораторної роботи;</li>
+          <li id= "exp-1-12">Участь у приймальній комісії, оформлення документівю.</li>
         </ul>
       </div>
     </div>    
@@ -546,126 +545,113 @@
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
     });
-  </script> 
+  </script>
   
   <script>
     const translations = {
       uk: {
-        navHome: "Головна сторінка",
-        navStory: "Моя історія",
-        navResume: "Резюме",
-        skillsTitle: "Технічні навички",
-        softSkillsTitle: "Навички",
-        softSkills: [
-          "Командна робота", "Стресостійкість", "Здатність до швидкого навчання",
-          "Адаптивність", "Комунікація", "Емпатія"
-        ],
-        educationTitle: "Освіта",
-        educationEntries: [
-          "Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП",
-          "Курс: GAME DESIGN. BASIS",
-          "Національний Фармацевтичний Університет"
-        ],
-        languagesTitle: "Знання мов",
-        langLevels: ["Рідна", "A2-B1", "Вільно", "A2-B1"],
-        whatICanDo: "Що я вмію?",
-        whatICanDoItems: [
-          "Дизайн вебсайтів та мобільних додатків у Figma:",
-          "Прототипування, UX-дослідження, аналіз користувачів;",
-          "Робота з типографікою, композицією та графічними елементами."
-        ],
-        experienceTitle: "Досвід роботи",
-        job1Title: "Фриланс, UX/UI Designer",
-        job1Items: [
-          "Створення графічних матеріалів, таких як візитки та буклети;",
-          "Розробка прототипів;", "Корпоративний сайт;", "Створення Landing page;",
-          "Дизайн мобільних додатків;", "Ескіз вакансій для інстаграму;",
-          "Розробка логотипів;", "Аналіз даних для покращення дизайну."
-        ],
-        job2Title: "Лаборант / Національний Фармацевтичний Університет",
-        job2Items: [
-          "Проведення досліджень, обробка та аналіз даних;",
-          "Створення навчальних матеріалів з графікою;",
-          "Планування та координація лабораторної роботи;",
-          "Участь у приймальній комісії, оформлення документівю"
-        ]
+        "nav-home": "Головна сторінка",
+        "nav-history": "Моя історія",
+        "nav-resume": "Резюме",
+        "skills-title": "Технічні навички",
+        "soft-skills-title": "Навики",
+        "skill-1": "Командна робота",
+        "skill-2": "Стресостійкість",
+        "skill-3": "Швидке навчання",
+        "skill-4": "Адаптивність",
+        "skill-5": "Комунікація",
+        "skill-6": "Емпатія",
+        "education-title": "Освіта",
+        "education-year-1": "2024р.<br>(4 місяці)</br>",
+        "edu-1": "Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП",
+        "education-year-2": "2023 / 2024р.<br>(6 місяців)</br>",
+        "edu-2": "Курс: GAME DESIGN. BASIS",
+        "education-year-3": "2018 / 2023р.",
+        "edu-3": "Національний Фармацевтичний Університет",
+        "language-title": "Знання мов",
+        "ukr": "Українська:",
+        "ukr-lvl": "Рідна",
+        "eng": "Англійська:",
+        "eng-lvl": "A2-B1",
+        "rus": "Російська:",
+        "rus-lvl": "Вільно",
+        "pl": "Польська:",
+        "pl-lvl": "A2-B1",
+        "can-do-title": "Що я вмію?",
+        "can-do-1": "Дизайн вебсайтів та мобільних додатків у Figma;",
+        "can-do-2": "Прототипування, UX-дослідження, аналіз користувачів;",
+        "can-do-3": "Робота з типографікою, композицією та графічними елементами.",
+        "experience-title": "Досвід роботи"
       },
       en: {
-        navHome: "Main page",
-        navStory: "My Story",
-        navResume: "Resume",
-        skillsTitle: "Technical Skills",
-        softSkillsTitle: "Soft Skills",
-        softSkills: [
-          "Teamwork", "Stress resistance", "Ability to learn quickly",
-          "Adaptability", "Communication", "Empathy"
-        ],
-        educationTitle: "Education",
-        educationEntries: [
-          "Course: UX/UI Design (FIGMA) + Prototype",
-          "Course: GAME DESIGN. BASIS",
-          "National University of Pharmacy"
-        ],
-        languagesTitle: "Languages",
-        langLevels: ["Native", "A2-B1", "Fluent", "A2-B1"],
-        whatICanDo: "What can I do?",
-        whatICanDoItems: [
-          "Design of websites and mobile apps in Figma:",
-          "Prototyping, UX research, user analysis;",
-          "Work with typography, composition and graphic elements."
-        ],
-        experienceTitle: "Work Experience",
-        job1Title: "Freelance, UX/UI Designer",
-        job1Items: [
-          "Creating graphic materials like business cards and brochures;",
-          "Prototyping;", "Corporate website;", "Landing page design;",
-          "Mobile app design;", "Instagram vacancy sketches;",
-          "Logo development;", "Data analysis to improve design."
-        ],
-        job2Title: "Lab Assistant / National University of Pharmacy",
-        job2Items: [
-          "Conducting research, processing and analyzing data;",
-          "Creating educational materials with graphics;",
-          "Planning and coordinating lab work;",
-          "Participating in admission committee, document processing"
-        ]
+        "nav-home": "Main page",
+        "nav-history": "My Story",
+        "nav-resume": "Resume",
+        "skills-title": "Technical Skills",
+        "soft-skills-title": "Soft Skills",
+        "skill-1": "Teamwork",
+        "skill-2": "Stress-resistance",
+        "skill-3": "Fast Learner",
+        "skill-4": "Adaptability",
+        "skill-5": "Communication",
+        "skill-6": "Empathy",
+        "education-title": "Education",
+        "education-year-1": "2024<br>(4 months)</br>",
+        "edu-1": "Course: UX/UI Design (FIGMA) + Prototype",
+        "education-year-2": "2023 / 2024<br>(6 months)</br>",
+        "edu-2": "Course: GAME DESIGN. BASIS",
+        "education-year-3": "2018 / 2023",
+        "edu-3": "National University of Pharmacy",
+        "language-title": "Languages",
+        "ukr": "Ukrainian:",
+        "ukr-lvl": "Native",
+        "eng": "English:",
+        "eng-lvl": "A2-B1",
+        "rus": "Russian:",
+        "rus-lvl": "Fluent",
+        "pl": "Polish:",
+        "pl-lvl": "A2-B1",
+        "can-do-title": "What can I do?",
+        "can-do-1": "Design websites and mobile apps in Figma;",
+        "can-do-2": "Prototyping, UX research, user analysis;",
+        "can-do-3": "Working with typography, composition, and graphics.",
+        "experience-title": "Work Experience",
+        "exp-date-1": "Feb 2024 / Present",
+        "exp-title-1": "Freelance, UX/UI Designer",
+        "exp-1-1": "Creating graphic materials such as business cards and brochures;",
+        "exp-1-2": "Prototyping;",
+        "exp-1-3": "Corporate website;",
+        "exp-1-4": "Creating Landing page;",
+        "exp-1-5": "Mobile app design;",
+        "exp-1-6": "Sketches for Instagram job posts;",
+        "exp-1-7": "Logo development;",
+        "exp-1-8": "Data analysis to improve design.",
+        "exp-date-2": "2018 / 2022",
+        "exp-title-2": "Lab Assistant / National University of Pharmacy",
+        "exp-1-9": "Conducting research, processing and analyzing data;",
+        "exp-1-10": "Creating educational materials with graphics;",
+        "exp-1-11": "Planning and coordination of laboratory work;",
+        "exp-1-12": "Participation in the admissions committee, document processing.",
       }
     };
   
     function setLanguage(lang) {
-      const t = translations[lang];
-  
-      document.querySelector('a[href="index.html"]').textContent = t.navHome;
-      document.querySelector('a[href="History.html"]').textContent = t.navStory;
-      document.querySelector('a[href="Resume.html"]').textContent = t.navResume;
-  
-      document.querySelector('.skills-title').textContent = t.skillsTitle;
-      document.querySelector('.soft-skills-title').textContent = t.softSkillsTitle;
-  
-      const softSkills = document.querySelectorAll('.skills-column div');
-      softSkills.forEach((el, i) => el.textContent = t.softSkills[i]);
-  
-      document.querySelector('.education-title').textContent = t.educationTitle;
-      const eduDetails = document.querySelectorAll('.education-detail');
-      eduDetails.forEach((el, i) => el.textContent = t.educationEntries[i]);
-  
-      document.querySelector('.language-title').textContent = t.languagesTitle;
-      const langLevels = document.querySelectorAll('.lang-level');
-      langLevels.forEach((el, i) => el.textContent = t.langLevels[i]);
-  
-      document.querySelector('.what-i-can-do-content h2').textContent = t.whatICanDo;
-      const whatItems = document.querySelectorAll('.what-i-can-do-content li');
-      whatItems.forEach((el, i) => el.textContent = t.whatICanDoItems[i]);
-  
-      document.querySelector('.experience-column h2').textContent = t.experienceTitle;
-      document.querySelectorAll('.job-block h3')[0].textContent = t.job1Title;
-      document.querySelectorAll('.job-block h3')[1].textContent = t.job2Title;
-  
-      const job1Items = document.querySelectorAll('.job-block ul')[0].children;
-      const job2Items = document.querySelectorAll('.job-block ul')[1].children;
-      Array.from(job1Items).forEach((li, i) => li.textContent = t.job1Items[i]);
-      Array.from(job2Items).forEach((li, i) => li.textContent = t.job2Items[i]);
+      localStorage.setItem("lang", lang);
+      updateContent(lang);
     }
-  </script>  
+  
+    function updateContent(lang) {
+      const elements = Object.keys(translations[lang]);
+      elements.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = translations[lang][id];
+      });
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = localStorage.getItem("lang") || "uk";
+      setLanguage(lang);
+    });
+  </script>
 </body>
 </html>
