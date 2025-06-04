@@ -15,10 +15,20 @@
 
     body {
       background: url("Picture Background.jpg") no-repeat center center/cover;
-      color: #0A2A29;
       height: 100vh;
       overflow: hidden;
       cursor: none;
+      background-color: #0A2A29;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .page-transition-enter {
+      animation: slide-in-right 0.6s ease both;
+    }
+
+    .page-transition-exit {
+      animation: slide-out-left 0.6s ease both;
     }
 
     .custom-cursor-shadow {
@@ -337,6 +347,7 @@
     </div>
     <p class="location-text">rachinska332@gmail.com</p> 
   </main>
+
   <script>
     const cursor = document.createElement('div');
     cursor.classList.add('custom-cursor-shadow');
@@ -379,6 +390,10 @@
     }
     const savedLang = localStorage.getItem('lang') || 'uk';
     setLanguage(savedLang);
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = '1';
+  });
   </script>
 </body>
 </html>
