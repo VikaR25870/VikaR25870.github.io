@@ -51,23 +51,6 @@
       display: flex;
       align-items: center;
     }
-    header {
-      width: 100%;
-      position: relative;
-      height: 80px;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-wrapper {
-      position: absolute;
-      top: 30px;
-      left: 60px;
-      display: flex;
-      align-items: center;
-    }
 
     nav ul {
       list-style: none;
@@ -87,7 +70,7 @@
     }
 
     nav ul li a:hover {
-      background:  linear-gradient(90deg, rgba(3, 76, 74, 0.5), rgba(10, 42, 41, 0.6), rgba(10, 42, 41, 0.6), rgba(3, 76, 74, 0.5));
+      background: linear-gradient(90deg, rgba(3, 76, 74, 0.5), rgba(10, 42, 41, 0.6), rgba(10, 42, 41, 0.6), rgba(3, 76, 74, 0.5));
       color: #ffffff;
     }
 
@@ -141,7 +124,7 @@
       margin-left: 75px;
       margin-top: 20px;
       position: relative;
-      }
+    }
 
     .skills-title {
       font-family: 'Forum', serif;
@@ -153,33 +136,33 @@
       position: relative;
       left: 0;
       top: 0;
-      }
+    }
 
     .skills-icons {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      }
+    }
 
     .icon-row {
       display: flex;
       gap: 20px;
       align-items: center;
-      }
+    }
 
     .icon-row img {
       width: 45px;
       height: auto;
       object-fit: contain;
-      }
+    }
 
     .soft-skills-container {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin-left: 75px;
-      margin-top: 65px;
-      }
+      margin-top: 55px;
+    }
 
     .soft-skills-title {
       font-family: 'Forum', serif;
@@ -188,12 +171,12 @@
       font-weight: 100;
       letter-spacing: 1px;
       margin-bottom: 20px;
-      }
+    }
 
     .soft-skills-wrapper {
       display: flex;
       gap: 20px;
-      }
+    }
 
     .skills-column {
       display: flex;
@@ -204,13 +187,13 @@
       font-size: 18px;
       font-weight: 300;
       color: #EDF0F7;
-      }
+    }
 
     .vertical-line {
       width: 1px;
       background: linear-gradient(to bottom, #193F3E, #E7E5D9, #193F3E);
       min-height: 100px;
-      }
+    }
 
     .education-section {
       left: 520px;
@@ -294,8 +277,8 @@
 
     .language-section {
       position: absolute;
-      top: 320px;
-      left: 520px;
+      top: 100px;
+      right: 170px;
       max-width: 400px;
     }
 
@@ -322,49 +305,35 @@
       align-self: stretch;
     }
 
-    .what-i-can-do-section {
+    .experience-columns {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
       position: absolute;
-      top: 480px;
-      left: 500px;
-      max-width: 420px;
+      bottom: 60px;
+      right: 120px;
+      max-width: 920px;
+      font-family: 'Georgia', serif;
+      color: #D2C2B5;
+      padding: 20px;
     }
 
-    .what-i-can-do-content {
-      position: relative;
-      padding-left: 20px;
-      font-family: 'EB Garamond', serif;
-      color: #EDF0F7;
-    }
-
-    .what-i-can-do-content h2 {
+    .experience-title {
       font-family: 'Forum', serif;
       font-size: 24px;
       font-weight: 100;
       color: #D2C2B5;
-      margin-bottom: 15px;
-    }
-
-    .what-i-can-do-content li {
-      margin-bottom: 12px;
-      line-height: 1.5;
-      font-size: 18px;
+      margin-left: 520px;
+      margin-top: -140px;
     }
 
     .experience-column {
-      max-width: 420px;
-      font-family: 'Georgia', serif;
-      color: #D2C2B5;
-      padding: 20px;
-      position: absolute;
-      top: 80px;
-      right: 60px;
-      display: flex;
-      flex-direction: column;
+      flex: 1 1 45%;
     }
 
     .experience-column h2 {
       font-size: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       font-weight: normal;
     }
 
@@ -394,7 +363,7 @@
       line-height: 1.5;
       color: #EDF0F7;
     }
-</style>
+  </style>
 </head>
 
 <body>
@@ -402,9 +371,9 @@
     <div class="nav-wrapper">
       <nav>
         <ul>
-          <li><a href="index.html"id="nav-home">Головна сторінка</a></li>
-          <li><a href="History.html"id="nav-history">Моя історія</a></li>
-          <li><a href="Resume.html"class="active"id="nav-resume">Резюме</a></li>
+          <li><a href="index.html" id="nav-home">Головна сторінка</a></li>
+          <li><a href="History.html" id="nav-history">Моя історія</a></li>
+          <li><a href="Resume.html" class="active" id="nav-resume">Резюме</a></li>
         </ul>
       </nav>
     </div>
@@ -413,12 +382,12 @@
       <span><small>+380(50)747-44-54</small></span>
     </div>
     <div class="language-switcher">
-      <button onclick="setLanguage('uk')">UA</button> |
-      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="switchLanguage('uk')">UA</button> |
+      <button onclick="switchLanguage('en')">EN</button>
     </div>
   </header>
 
-  <main> 
+  <main>
     <div class="skills-section">
       <h1 class="skills-title" id="skills-title">Технічні навички</h1>
       <div class="skills-icons">
@@ -438,15 +407,15 @@
       <h2 class="soft-skills-title" id="soft-skills-title">Навики</h2>
       <div class="soft-skills-wrapper">
         <div class="skills-column">
-          <div id="skill-1">Командна робота</div>
-          <div id="skill-2">Стресостійкість</div>
-          <div id="skill-3">Швидке навчання</div>
+          <div id="skill-1">Адаптивність</div>
+          <div id="skill-2">Здатність до навчання</div>
+          <div id="skill-3">Активне слухання</div>
         </div>
         <div class="vertical-line"></div>
         <div class="skills-column">
-          <div id="skill-4">Адаптивність</div>
-          <div id="skill-5">Комунікація</div>
-          <div id="skill-6">Емпатія</div>
+          <div id="skill-4">Комунікація</div>
+          <div id="skill-5">Стресостійкість</div>
+          <div id="skill-6">Самоорганізація</div>
         </div>
       </div>
     </div> 
@@ -455,15 +424,15 @@
       <h2 class="education-title" id="education-title">Освіта</h2>
       <div class="education-wrapper">
         <div class="education-entry">
-          <span class="education-year" id="education-year-1">2024р.<br>(4 місяці)</br></span>
+          <span class="education-year" id="education-year-1">2024 р.<br>(4 місяці)</br></span>
           <span class="education-detail" id="edu-1">Курс: UX/UI Дизайн (FIGMA) + ПРОТОТИП</span>
         </div>
         <div class="education-entry">
-          <span class="education-year" id="education-year-2">2023 / 2024р.<br>(6 місяців)</br></span>
+          <span class="education-year" id="education-year-2">2023 / 2024 р.<br>(6 місяців)</br></span>
           <span class="education-detail" id="edu-2">Курс: GAME DESIGN. BASIS</span>
         </div>
         <div class="education-entry">
-          <span class="education-year" id="education-year-3",>2018 / 2023р.</span>
+          <span class="education-year" id="education-year-3">2018 / 2023 р.</span>
           <span class="education-detail" id="edu-3">Національний Фармацевтичний Університет</span>
         </div>
       </div>
@@ -498,45 +467,39 @@
       </div>
     </div>    
     
-    <div class="what-i-can-do-section">
-      <div class="what-i-can-do-content">
-        <h2 id= "can-do-title">Що я вмію?</h2>
-        <ul>
-          <li id= "can-do-1">Дизайн вебсайтів та мобільних додатків у Figma;</li>
-          <li id= "can-do-2">Прототипування, UX-дослідження, аналіз користувачів;</li>
-          <li id= "can-do-3">Робота з типографікою, композицією та графічними елементами.</li>
-        </ul>
+    <section id="experience">
+     <h2 class="experience-title">Досвід роботи</h2>
+      <div class="experience-columns">
+        <div class="experience-column" id="exp-freelance">
+          <div class="job-block">
+            <span class="job-date" id="exp-date-1">Лютий 2024 / по сьогодні</span>
+            <h3 id="exp-title-1">Фриланс, UX/UI Designer</h3>
+            <ul>
+              <li id="exp-1-1">Редизайн існуючого сайта для покращення UX/UI;</li>
+              <li id="exp-1-2">Дизайн для особистих блогів та портфоліо;</li>
+              <li id="exp-1-3">Створення Landing page;</li>
+              <li id="exp-1-4">UI дизайн для мобільних застосунків;</li>
+              <li id="exp-1-5">Дизайн банерів для соціальних мереж;</li>
+              <li id="exp-1-6">Робота з правками та фідбеком;</li>
+              <li id="exp-1-7">Планування етапів роботи та дедлайнів;</li>
+              <li id="exp-1-8">Проводила аналіз даних для виявлення потреб користувачів і покращення дизайну.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-column" id="exp-lab">
+          <div class="job-block">
+            <span class="job-date" id="exp-date-2">2018 / 2022</span>
+            <h3 id="exp-title-2">Лаборант / Національний Фармацевтичний Університет</h3>
+            <ul>
+              <li id="exp-1-9">Проводила дослідження, обробляла та аналізувала дані;</li>
+              <li id="exp-1-10">Створювала навчальні матеріали для студентів, що включало роботу з графікою та інформаційним дизайном;</li>
+              <li id="exp-1-11">Планувала та координувала лабораторні роботи та експерименти;</li>
+              <li id="exp-1-12">Працювала в приймальній комісії, оформлювала документи.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <div class="experience-column">
-      <h2 id= "experience-title">Досвід роботи</h2>
-    
-      <div class="job-block">
-        <span class="job-date" id= "exp-date-1">Лютий 2024 / по сьогодні</span>
-        <h3 id= "exp-title-1">Фриланс, UX/UI Designer</h3>
-        <ul>
-          <li id= "exp-1-1">Редизайн існуючого сайта для покращення UX/UI;</li>
-          <li id= "exp-1-2">Дизайн для особистих блогів та портфоліо;</li>
-          <li id= "exp-1-3">Створення Landing page;</li>
-          <li id= "exp-1-4">UI дизайн для мобільних застосунків;</li>
-          <li id= "exp-1-5">Дизайн банерів для соціальних мереж;</li>
-          <li id= "exp-1-6">Робота з правками та фідбеком;</li>
-          <li id= "exp-1-7">Планування етапів роботи та дедлайнів;</li>
-          <li id= "exp-1-8">Проводила аналіз даних для виявлення потреб користувачів і покращення дизайну.</li>
-        </ul>
-      </div>
-      <div class="job-block">
-        <span class="job-date">2018 / 2022</span>
-        <h3 id= "exp-title-2">Лаборант / Національний Фармацевтичний Університет</h3>
-        <ul>
-          <li id= "exp-1-9">Проводила дослідження, обробляла та аналізувала дані;</li>
-          <li id= "exp-1-10">Створювала навчальні матеріали для студентів, що включало роботу з графікою та інформаційним дизайном;</li>
-          <li id= "exp-1-11">Планувала та координувала лабораторні роботи та експерименти;</li>
-          <li id= "exp-1-12">Працювала в приймальній комісії, оформлювала документи.</li>
-        </ul>
-      </div>
-    </div>    
+    </section>
    </main>
    <script>
     const cursor = document.createElement('div');
@@ -579,13 +542,9 @@
         "rus-lvl": "Вільно",
         "pl": "Польська:",
         "pl-lvl": "A2-B1",
-        "can-do-title": "Що я вмію?",
-        "can-do-1": "Дизайн вебсайтів та мобільних додатків у Figma;",
-        "can-do-2": "Прототипування, UX-дослідження, аналіз користувачів;",
-        "can-do-3": "Робота з типографікою, композицією та графічними елементами.",
-        "experience-title": "Досвід роботи"
-        "exp-date-1": "Лютий 2024 / По сьогодні",
-        "exp-title-1": "Фриланс, UX/UI Дизайнер",
+        "experience-title": "Досвід роботи",
+        "exp-date-1": "Лютий 2024 / по сьогодні",
+        "exp-title-1": "Фриланс, UX/UI Designer",
         "exp-1-1": "Редизайн існуючого сайта для покращення UX/UI;",
         "exp-1-2": "Дизайн для особистих блогів та портфоліо;",
         "exp-1-3": "Створення Landing page;",
@@ -599,7 +558,7 @@
         "exp-1-9": "Проводила дослідження, обробляла та аналізувала дані;",
         "exp-1-10": "Створювала навчальні матеріали для студентів, що включало роботу з графікою та інформаційним дизайном;",
         "exp-1-11": "Планувала та координувала лабораторні роботи та експерименти;",
-        "exp-1-12": "Працювала в приймальній комісії, оформлювала документи.",
+        "exp-1-12": "Працювала в приймальній комісії, оформлювала документи."
       },
       en: {
         "nav-home": "Main page",
@@ -629,10 +588,6 @@
         "rus-lvl": "Fluent",
         "pl": "Polish:",
         "pl-lvl": "A2-B1",
-        "can-do-title": "What can I do?",
-        "can-do-1": "Design websites and mobile apps in Figma;",
-        "can-do-2": "Prototyping, UX research, user analysis;",
-        "can-do-3": "Working with typography, composition, and graphics.",
         "experience-title": "Work Experience",
         "exp-date-1": "Feb 2024 / Present",
         "exp-title-1": "Freelance, UX/UI Designer",
@@ -648,32 +603,26 @@
         "exp-title-2": "Lab Assistant / National University of Pharmacy",
         "exp-1-9": "Conducted research, processed and analyzed data;",
         "exp-1-10": "Created educational materials for students, including work with graphics and information design;",
-        "exp-1-11": "Lanned and coordinated laboratory work and experiments;",
-        "exp-1-12": "Worked in the admissions committee, processed documents.",
+        "exp-1-11": "Planned and coordinated laboratory work and experiments;",
+        "exp-1-12": "Worked in the admissions committee, processed documents."
       }
     };
-  
-    function setLanguage(lang) {
-      localStorage.setItem("lang", lang);
-      updateContent(lang);
-    }
-  
-    function updateContent(lang) {
-      const elements = Object.keys(translations[lang]);
-      elements.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = translations[lang][id];
+
+    function switchLanguage(lang) {
+      Object.keys(translations[lang]).forEach(function(key) {
+        const el = document.getElementById(key);
+        if (el) {
+          el.innerHTML = translations[lang][key];
+        }
       });
+      localStorage.setItem("lang", lang);
     }
   
     document.addEventListener("DOMContentLoaded", () => {
       const lang = localStorage.getItem("lang") || "uk";
-      setLanguage(lang);
+      switchLanguage(lang);
+      document.body.style.opacity = '1';
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-    document.body.style.opacity = '1';
-  });
   </script>
 </body>
 </html>
